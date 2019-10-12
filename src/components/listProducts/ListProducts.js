@@ -38,17 +38,14 @@ const elements = [{
 ];
 export class ListProducts extends React.Component {
 
-    // eslint-disable-next-line no-useless-constructor
-    constructor(){
-        super();
-    }
-
+    /**
+     * Render method
+     */
     render(){
-
-        return  <div>
-        {elements.map((value, index) => {
+        return  (<div>{elements.map((value, index) => {
             return this.getProduct(index)
-          })}</div>
+          })}
+          </div>);
     }
 
     /**
@@ -56,8 +53,8 @@ export class ListProducts extends React.Component {
      * @param {*} index 
      */
     getProduct(index){
-        const randImage = Math.floor(Math.random() * Math.floor(images.length -1 ));
-        const randPrice = Math.floor(Math.random() * Math.floor(98));
-        return <Product key={index} image={images[randImage]} price={randPrice} title={elements[index].title} description={elements[index].description} />
+        const randomImage = Math.floor(Math.random() * Math.floor(images.length -1));
+        const randomPrice = Math.floor(Math.random() * Math.floor(98));
+        return <Product key={index} image={images[randomImage]} price={randomPrice} title={elements[index].title} description={elements[index].description} />
     }
 }
