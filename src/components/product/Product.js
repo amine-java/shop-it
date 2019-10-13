@@ -5,6 +5,7 @@ export class Product extends React.Component {
 
 
     state = {
+        id : this.props.id , 
         title : this.props.title , 
         image : this.props.image , 
         description : this.props.description , 
@@ -38,6 +39,6 @@ export class Product extends React.Component {
      * OnAddToCart handler event
      */
     onAddToCart(){
-        alert('You just added: ' + this.props.title + ' to your cart');
+        this.props.onAddItem({id : this.state.id , title : this.state.title , price : this.state.price});
     }
 }

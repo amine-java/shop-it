@@ -1,5 +1,6 @@
 import { Product } from "../product/Product";
 import React from 'react';
+
 const images = [ "https://images-na.ssl-images-amazon.com/images/I/51pQOiQpY5L._UX679_.jpg" , 
 "https://ssfr.tidebuy.com/images/product/14/14009/14009333_2.jpg",
 "https://images.yaoota.com/B6eMG357KC7kDNvg3WI56wUs-yE=/trim/yaootaweb-production/media/crawledproductimages/577045e3ae6d47d4d4ad912957929325b306c497.jpg",
@@ -55,6 +56,6 @@ export class ListProducts extends React.Component {
     getProduct(index){
         const randomImage = Math.floor(Math.random() * Math.floor(images.length -1));
         const randomPrice = Math.floor(Math.random() * Math.floor(98));
-        return <Product key={index} image={images[randomImage]} price={randomPrice} title={elements[index].title} description={elements[index].description} />
+        return <Product onAddItem = {this.props.onAddItem} id = {index} key={index} image={images[randomImage]} price={randomPrice} title={elements[index].title} description={elements[index].description} />
     }
 }
