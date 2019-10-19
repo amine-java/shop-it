@@ -13,7 +13,7 @@ const elements = [{
     description: 'Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum.'
 },
 {
-    title: 'Ralph Loren Jean' , 
+    title: 'Berschka Jean' , 
     description: 'Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum.'
 },
 {
@@ -21,7 +21,7 @@ const elements = [{
     description: 'Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum.'
 },
 {
-    title: 'Ralph Loren Jean' , 
+    title: 'Ralph Lauren Jean' , 
     description: 'Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum.'
 },
 {
@@ -29,7 +29,7 @@ const elements = [{
     description: 'Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum.'
 },
 {
-    title: 'Ralph Loren Jean' , 
+    title: 'H&M' , 
     description: 'Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum.'
 },
 {
