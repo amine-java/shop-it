@@ -1,5 +1,6 @@
 import React from 'react';
 import { ListProducts } from '../listProducts/ListProducts';
+import ShopContext from '../../contexts/ShopContext';
 
 export class Cart extends React.Component{
 
@@ -15,6 +16,9 @@ export class Cart extends React.Component{
     constructor(props){
         super(props);
         this.onAddItem = this.onAddItem.bind(this);
+        this.contextValue = {
+            addItem : this.onAddItem
+        }
     }
 
     /**
@@ -30,7 +34,9 @@ export class Cart extends React.Component{
                 return <p key={index}>{value.title}: ${value.price} -> {value.quantity}</p>
                 })
             }
-            <ListProducts onAddItem = {this.onAddItem} />
+            <ShopContext.Provider value={this.contextValue}>
+                 <ListProducts/>
+            </ShopContext.Provider>
             </div>
         );
     }

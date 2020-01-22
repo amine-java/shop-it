@@ -56,6 +56,6 @@ export class ListProducts extends React.Component {
     getProduct(index){
         const randomImage = Math.floor(Math.random() * Math.floor(images.length -1));
         const randomPrice = Math.floor(Math.random() * Math.floor(98));
-        return <Product onAddItem = {this.props.onAddItem} id = {index} key={index} image={images[randomImage]} price={randomPrice} title={elements[index].title} description={elements[index].description} />
+        return <Product id = {index} key={index} image={images[randomImage]} price={randomPrice} title={elements[index].title} description={elements[index].description} />
     }
 }
